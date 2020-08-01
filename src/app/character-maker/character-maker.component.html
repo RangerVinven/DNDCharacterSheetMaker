@@ -1,0 +1,127 @@
+<link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+<h1>Dungeons And Dragons 5e Character Sheet Maker</h1>
+<h3>Put in the information and download your character sheet, ready to print</h3>
+<h4>If you don't want some information printed, then just don't put it in</h4>
+<div class="names">
+        <h3>Names</h3>
+        <input type="text" placeholder="Character's Name" id="inputs" [(ngModel)]="characterName" class="characterName" name="charactersName">
+        <input type="text" placeholder="Player's Name" id="inputs" [(ngModel)]="playerName" class="playerName">
+</div>
+<app-die-roller class="reroll"></app-die-roller>
+<app-notes class="notes"></app-notes>
+<div class="races">
+        <h3>Races</h3>
+        <input type="checkbox" value="human" id="raceCheckboxes" [(ngModel)]="human">
+        <label for="human" id="inputs">Human</label>
+    
+        <input type="checkbox" value="elf" id="raceCheckboxes" [(ngModel)]="elf">
+        <label for="elf" id="inputs">Elf</label>
+    
+        <input type="checkbox" value="Dwarf" id="raceCheckboxes" [(ngModel)]="dwarf">
+        <label for="dwarf" id="inputs">Dwarf</label>
+    
+        <input type="checkbox" value="Dragonborn" id="raceCheckboxes" [(ngModel)]="dragonborn">
+        <label for="dragonborn" id="inputs">Dragonborn</label>
+    
+        <input type="checkbox" value="Halfling" id="raceCheckboxes" [(ngModel)]="halfling">
+        <label for="halfling" id="inputs">Halfling</label>
+    
+        <input type="checkbox" value="Half-Elf" id="raceCheckboxes" [(ngModel)]="halfElf">
+        <label for="half-elf" id="inputs">Half-Elf</label>
+    
+        <input type="checkbox" value="Half-Orc" id="raceCheckboxes" [(ngModel)]="halfOrc">
+        <label for="half-orc" id="inputs">Half-Orc</label>
+    
+        <input type="checkbox" value="Orc" id="raceCheckboxes" [(ngModel)]="orc">
+        <label for="orc" id="inputs">Orc</label>
+
+        <input type="checkbox" value="Tiefling" id="raceCheckboxes" [(ngModel)]="tiefling">
+        <label for="tiefling" id="inputs">Tiefling</label>
+    
+        <input type="checkbox" value="Gnome" id="raceCheckboxes" [(ngModel)]="gnome">
+        <label for="gnome" id="inputs">Gnome</label>
+</div>
+<br>
+<div class="classes">
+        <h3>Classes</h3>
+        <input type="checkbox" value="barbarian" id="classCheckboxes" [(ngModel)]="barbarian">
+        <label for="barbarian" id="inputs">Barbarian</label>
+    
+        <input type="checkbox" value="bard" id="classCheckboxes" [(ngModel)]="bard">
+        <label for="bard" id="inputs">Bard</label>
+    
+        <input type="checkbox" value="cleric" id="classCheckboxes" [(ngModel)]="cleric">
+        <label for="cleric" id="inputs">Cleric</label>
+    
+        <input type="checkbox" value="druid" id="classCheckboxes" [(ngModel)]="druid">
+        <label for="druid" id="inputs">Druid</label>
+    
+        <input type="checkbox" value="fighter" id="classCheckboxes" [(ngModel)]="fighter">
+        <label for="fighter" id="inputs">Fighter</label>
+    
+        <input type="checkbox" value="monk" id="classCheckboxes" [(ngModel)]="monk">
+        <label for="monk" id="inputs">Monk</label>
+    
+        <input type="checkbox" value="paladin" id="classCheckboxes" [(ngModel)]="paladin">
+        <label for="paladin" id="inputs">Paladin</label>
+    
+        <input type="checkbox" value="ranger"  id="classCheckboxes" [(ngModel)]="ranger">
+        <label for="ranger" id="inputs">Ranger</label>
+    
+        <input type="checkbox" value="rouge" id="classCheckboxes" [(ngModel)]="rouge">
+        <label for="rouge" id="inputs">Rogue</label>
+    
+        <input type="checkbox" value="sorcerer" id="classCheckboxes" [(ngModel)]="sorcerer">
+        <label for="sorcerer" id="inputs">Sorcerer</label>
+    
+        <input type="checkbox" value="warlock" id="classCheckboxes" [(ngModel)]="warlock">
+        <label for="warlock" id="inputs">Warlock</label>
+    
+        <input type="checkbox" value="wizard" id="classCheckboxes" [(ngModel)]="wizard">
+        <label for="wizard" id="inputs">Wizard</label>
+</div>
+<br>
+<div class="abilityScores">
+        <h3>Ability Scores</h3>
+        <input type="number" placeholder="Strength" id="inputs" class="strength" [(ngModel)]="strength">
+        <input type="number" placeholder="Dexterity" id="inputs" class="dexterity" [(ngModel)]="dexterity">
+        <input type="number" placeholder="Constitution" id="inputs" class="constitution" [(ngModel)]="constitution">
+        <input type="number" placeholder="Intelligence" id="inputs" class="intelligence" [(ngModel)]="intelligence">
+        <input type="number" placeholder="Wisdom" id="inputs" class="wisdom" [(ngModel)]="wisdom">
+        <input type="number" placeholder="Charisma" id="inputs" class="charisma" [(ngModel)]="charisma">
+</div>
+<br>
+<!-- <div class="background">
+    <textarea type="text" placeholder="Background" class="background" [(ngModel)]="background" maxlength="480"></textarea>
+</div> -->
+<div class="misc">
+
+    <h3>Add</h3>
+
+    <input type="checkbox" value="abilityModifiers" id="miscCheckboxes" [(ngModel)]="abilityModifiers">
+    <label for="abilityModifiers" id="inputs">Ability Modifiers</label>
+
+    <input type="checkbox" value="hitDie" id="miscCheckboxes" [(ngModel)]="hitDice">
+    <label for="hitDice" id="inputs">Hit Dice</label>
+
+    <input type="checkbox" value="backgroundSheet" id="miscCheckboxes" [(ngModel)]="backgroundSheet">
+    <label for="backgroundSheet" id="inputs">Background Sheet</label>
+
+    <input type="checkbox" value="spellSheet" id="miscCheckboxes" [(ngModel)]="spellSheet">
+    <label for="spellSheet" id="inputs">Spell Sheet</label>
+
+</div>
+<br>
+<div class="download">
+    <a id="download" hidden="true" download>
+        Download
+    </a>
+    <!-- <button class="btn btn-primary" (click)="editImage(document.getElementsByClassName('characterName').value)">Download</button> -->
+    <!-- <a href="#" hidden="true" id="downloadLink" download></a> -->
+    <button class="btn btn-primary" (click)="editImage(this);">Download</button>
+</div>
+<br>
+<img src="../../../characterSheets/page1.jpg" hidden="true" id="image">
+<canvas id="myCanvas"></canvas>
+<canvas id="backgroundCanvas"></canvas>
+<canvas id="spellSheetCanvas"></canvas>

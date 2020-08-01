@@ -1,0 +1,56 @@
+#inputs {
+    margin-right: 20px;
+}
+.races input {
+    margin-right: 5px;
+}
+.classes input {
+    margin-right: 5px;
+}
+.misc input {
+    margin-right: 5px;
+}
+.background textarea {
+    width: 700px;
+    height: 250px;
+}
+a {
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+    background-color: royalblue;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    :hover {
+        background-color: royalblue;
+    }
+}
+button {
+    font-size: 20px;
+}
+.myCanvas {
+    width: 300;
+    position: absolute;
+    padding-right: 10px;
+}
+.backgroundCanvas {
+    width: 300;
+    position: absolute;
+}
+.spellSheetCanvas {
+    width: 300;
+    position: absolute;
+}
+img {
+    position: absolute;
+}
+button .dieRoller {
+    color: red;
+}
+#reroll {
+    position: absolute;
+}
+#notes {
+    position: absolute;
+}
