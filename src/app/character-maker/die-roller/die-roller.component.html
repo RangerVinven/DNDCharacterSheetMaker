@@ -1,6 +1,8 @@
-<button class="btn btn-primary" (click)="rollNumber()">3D6 Roller</button>
-<div class="reroll" title="Re-roll die that land on one">
-    <input type="checkbox" name="rerollOnes" id="rerollOnes" [(ngModel)]="reroll">
-    <label for="rerollOnes">Re-roll 1s?</label>
+<div class="container">
+    <button class="btn btn-primary" (click)="rollNumber()">3D6 Roller</button>
+    <div class="reroll" title="Re-roll die that land on one">
+        <input type="checkbox" name="rerollOnes" id="rerollOnes" [(ngModel)]="reroll">
+        <label for="rerollOnes">Re-roll 1s?</label>
+    </div>
+    <p>{{ number }}</p>
 </div>
-<p>{{ number }}</p>

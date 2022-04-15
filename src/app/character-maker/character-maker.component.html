@@ -2,13 +2,16 @@
 <h1>Dungeons And Dragons 5e Character Sheet Maker</h1>
 <h3>Put in the information and download your character sheet, ready to print</h3>
 <h4>If you don't want some information printed, then just don't put it in</h4>
-<div class="names">
+<div class="container">
+
+<app-die-roller class="reroll"></app-die-roller>
+<div>
+    <div class="names">
         <h3>Names</h3>
         <input type="text" placeholder="Character's Name" id="inputs" [(ngModel)]="characterName" class="characterName" name="charactersName">
         <input type="text" placeholder="Player's Name" id="inputs" [(ngModel)]="playerName" class="playerName">
 </div>
-<app-die-roller class="reroll"></app-die-roller>
-<app-notes class="notes"></app-notes>
+
 <div class="races">
         <h3>Races</h3>
         <input type="checkbox" value="human" id="raceCheckboxes" [(ngModel)]="human">
@@ -110,15 +113,19 @@
     <input type="checkbox" value="spellSheet" id="miscCheckboxes" [(ngModel)]="spellSheet">
     <label for="spellSheet" id="inputs">Spell Sheet</label>
 
+    <div class="download">
+        <a id="download" hidden="true" download>
+            Download
+        </a>
+        <!-- <button class="btn btn-primary" (click)="editImage(document.getElementsByClassName('characterName').value)">Download</button> -->
+        <!-- <a href="#" hidden="true" id="downloadLink" download></a> -->
+        <button class="btn btn-primary" (click)="editImage(this);">Create</button>
+    </div>
+
 </div>
+</div>
+<app-notes class="notes"></app-notes>
 <br>
-<div class="download">
-    <a id="download" hidden="true" download>
-        Download
-    </a>
-    <!-- <button class="btn btn-primary" (click)="editImage(document.getElementsByClassName('characterName').value)">Download</button> -->
-    <!-- <a href="#" hidden="true" id="downloadLink" download></a> -->
-    <button class="btn btn-primary" (click)="editImage(this);">Download</button>
 </div>
 <br>
 <img src="../../../characterSheets/page1.jpg" hidden="true" id="image">

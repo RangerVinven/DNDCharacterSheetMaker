@@ -1,10 +1,15 @@
 h3 {
     text-align: right;
     margin-right: 180px;
+    color: black;
+}
+@media only screen and (max-width: 768px) {
+    textarea {
+        display: none;
+    }
 }
 textarea {
     position: absolute;
-    right: 0;
     margin-right: 120px;
     height: 300px;
 }

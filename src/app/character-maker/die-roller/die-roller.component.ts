@@ -22,27 +22,16 @@ export class DieRollerComponent implements OnInit {
     let reroll = this.reroll;
 
     if(reroll == true) {
-      if(firstRoll == 1) {
-        while(firstRoll == 1) {
-          firstRoll = Math.floor(Math.random()*6)+1;
-        } 
+      while(firstRoll == 1) {
+        firstRoll = Math.floor(Math.random()*6)+1;
       }
-      if(secondRoll == 1) {
-        while(secondRoll == 1) {
-          secondRoll = Math.floor(Math.random()*6)+1;
-        } 
-      }
-      if(thirdRoll == 1) {
-        while(thirdRoll == 1) {
-          thirdRoll = Math.floor(Math.random()*6)+1;
-        } 
+      while(secondRoll == 1) {
+        secondRoll = Math.floor(Math.random()*6)+1;
+      } 
+      while(thirdRoll == 1) {
+        thirdRoll = Math.floor(Math.random()*6)+1;
       }
     }
-
-    console.log(reroll);
-    console.log(firstRoll);
-    console.log(secondRoll);
-    console.log(thirdRoll);
 
     this.number = firstRoll+secondRoll+thirdRoll;
 

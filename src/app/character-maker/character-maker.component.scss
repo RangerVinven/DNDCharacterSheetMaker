@@ -1,3 +1,9 @@
+h1, li, label, h3, h4 {
+    color: black;
+}
+.container {
+    display: flex;
+}
 #inputs {
     margin-right: 20px;
 }
@@ -48,9 +54,6 @@ img {
 button .dieRoller {
     color: red;
 }
-#reroll {
-    position: absolute;
-}
-#notes {
-    position: absolute;
+.download {
+    display: inline;
 }
